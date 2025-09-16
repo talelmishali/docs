@@ -376,7 +376,7 @@ If you would like to provide the recipient's name when sending an on-demand noti
 
 ```php
 Notification::route('mail', [
-    'barrett@example.com' => 'Barrett Blair',
+    'Barrett Blair' => 'barrett@example.com',
 ])->notify(new InvoicePaid($invoice));
 ```
 
@@ -384,7 +384,7 @@ Using the `routes` method, you may provide ad-hoc routing information for multip
 
 ```php
 Notification::routes([
-    'mail' => ['barrett@example.com' => 'Barrett Blair'],
+    'mail' => ['Barrett Blair' => 'barrett@example.com'],
     'vonage' => '5555555555',
 ])->notify(new InvoicePaid($invoice));
 ```
